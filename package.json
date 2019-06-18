@@ -10,6 +10,10 @@
     "express": "^3.2.4",
     "jade": "^1.11.0",
     "mocha": "^1.20.1",
-    "supertest": "^1.1.0"
+    "supertest": "^1.1.0",
+    "mocha-circleci-reporter": "^0.0.3"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter mocha-circleci-reporter test/*.js"
   }
 }
