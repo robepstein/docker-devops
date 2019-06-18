@@ -6,7 +6,10 @@
 #    branch: master
 #    commands:
 #      - $DOCKER_HUB_TRIGGER
-
-test:
-  override:    
-    - mocha
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4-node
+    steps:
+      - checkout
