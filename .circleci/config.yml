@@ -27,6 +27,8 @@ jobs: # a collection of steps
           path: test-results.xml
       # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
   deploy:
+    machine:
+        enabled: true
     steps: #curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://cloud.docker.com/api/build/v1/source/0ecf38ea-872d-4613-a1b2-88d103da66c9/trigger/f964c261-2fa9-4d69-a461-b72ba820ea3b/call/
       - checkout
       - run:
